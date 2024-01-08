@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Notenrechner</title>
+</head>
+<body>
+    <header>
+        <h1>Notenrechner</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Tabelle</a></li>
+                <li><a href="/grades/addGrade.html">Noten hinzufügen</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <dialog id="gradeCalculationDialog">
+            <h2>Notendurchschnitt berechnen</h2>
+            <form id="dialogForm" method="dialog">
+                <label for="desiredAverage">Gewünschter Durchschnitt:</label>
+                <input type="number" id="desiredAverage" name="desiredAverage" min="1" max="6" step="0.01" required>
+        
+                <label for="outstandingGrades">Anzahl kommender Noten:</label>
+                <input type="number" id="outstandingGrades" name="outstandingGrades" min="1" step="1" required>
+        
+                <menu>
+                    <button type="submit">Berechnen</button>
+                    <button type="button" id="closeDialog">Schliessen</button>
+                </menu>
+            </form>
+        </dialog>
+        <dialog id="neededGradeDialog">
+            <p id="calculationResult"></p>
+            <button type="button" id="closeDialog2">Schliessen</button>
+        </dialog>
+        <table id="gradesTable">
+            <thead>
+                <tr>
+                    <th>Kategorie</th>
+                    <th>Durschnitt</th>  
+                    <th>Notenanzahl</th>
+                    <th>Anzeigen</th>
+                    <th>Berechnen</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        <button id="clearStorageButton">Clear Data</button>
+        <p>&copy; 2023 Notenrechner</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

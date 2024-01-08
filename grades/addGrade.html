@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addGrade.css">
+    <title>Notenrechner</title>
+</head>
+<body>
+    <header>
+        <h1>Notenrechner</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Tabelle</a></li>
+                <li><a href="/grades/addGrade.html">Noten hinzufügen</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="left-section">
+            <form id="categoryForm">
+                <label for="category">Fach Name:</label>
+                <input type="text" id="category" name="category">
+                <label for="fullOrHalf">Abschlussrelevanz (0-200):</label>
+                <input value="100" type="number" id="fullOrHalf" name="fullOrHalf">
+                <input type="submit" value="Fach hinzufügen">
+            </form>
+        </div>
+        <div class="right-section">
+            <form id="gradeForm">
+                <label for="gradeNumber">Note:</label>
+                <input type="text" id="gradeNumber" name="gradeNumber" pattern="^(6(\.0+)?|([1-5](\.\d+)?)|1(\.0+)?)$">
+
+                <label for="gradeCategory">Kategorie:</label>
+                <select id="gradeCategory" name="gradeCategory">
+                    <option value="">Keine Vorhanden</option>
+                </select>
+
+                <label for="relevance">Relevanz (0-100):</label>
+                <input value="100" type="number" id="relevance" name="relevance" min="0" max="100">
+
+                <input type="submit" value="Note hinzufügen">
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Notenrechner</p>
+    </footer>
+
+    <script src="addGrade.js"></script>
+</body>
+</html>
